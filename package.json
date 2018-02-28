@@ -1,17 +1,16 @@
 {
-  "name": "aurelia-skeleton-plugin",
-  "version": "1.0.1",
-  "description": "A starter kit for building an Aurelia plugin.",
+  "name": "amaranth-utils",
+  "version": "0.0.1",
+  "description": "Amaranth core, utils functions.",
   "keywords": [
-    "aurelia",
-    "plugin",
-    "skeleton"
+    "amaranth",
+    "utils"
   ],
   "homepage": "http://amaranth-framework.github.io",
   "bugs": {
     "url": "https://github.com/amaranth-framework/utils/issues"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "author": "Dragos Cirjan <dragos.cirjan@gmail.com> (http://dragosc.itmcd.ro/)",
   "main": "dist/commonjs/index.js",
   "repository": {
@@ -43,6 +42,9 @@
     "babel-preset-stage-1": "^6.22.0",
     "conventional-changelog": "1.1.3",
     "del": "^2.2.2",
+    "esdoc": "^1.0.4",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^4.18.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",

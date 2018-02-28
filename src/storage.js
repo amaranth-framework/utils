@@ -1,3 +1,4 @@
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 /**
  * Amaranth - Aurelia Skeleton (http://github.com/amaranth-framework/aurelia-skeleton/)
  *
@@ -12,6 +13,11 @@ import * as Cookies from 'js-cookie';
 
 /**
  * Class used for storing data using differen browser functionalities.
+ * @example
+ * const storage = new Storage();
+ * storage.set('key', 'value');
+ * const value = storage.get('value');
+ * storage.remove('key')
  */
 export class Storage {
     /**
@@ -34,6 +40,10 @@ export class Storage {
     }
     /**
      * Obtain vaue for a certain key.
+     * @example
+     * const storage = new Storage();
+     * storage.get('key');
+     *
      * @param  {String} key
      * @return {any}
      */
@@ -42,11 +52,11 @@ export class Storage {
             try {
                 return JSON.parse(window[`${this.type}Storage`].getItem(key) || 'null');
             } catch (e) {
-                console.warn( // eslint-disable-line no-use-before-define
+                console.warn(
                     'Storage#get',
                     `Could not implement (${this.type}) storage. Fallback to cookie.`,
                     e
-                );
+                ); // eslint-disable-line no-use-before-define
                 throw e;
             }
         }
@@ -62,11 +72,11 @@ export class Storage {
                 window[`${this.type}Storage`].removeItem(key);
                 return true;
             } catch (e) {
-                console.warn( // eslint-disable-line no-use-before-define
+                console.warn(
                     'Storage#remove',
                     `Could not implement (${this.type}) storage. Fallback to cookie.`,
                     e
-                );
+                ); // eslint-disable-line no-use-before-define
             }
         }
         return Cookies.remove(key);
@@ -83,11 +93,11 @@ export class Storage {
                 storage.setItem(key, JSON.stringify(value));
                 return true;
             } catch (e) {
-                console.warn( // eslint-disable-line no-use-before-define
+                console.warn(
                     'Storage#set',
                     `Could not implement ${this.type} storage. Fallback to cookie.`,
                     e
-                );
+                ); // eslint-disable-line no-use-before-define
             }
         }
         return Cookies.set(key, JSON.stringify(value));

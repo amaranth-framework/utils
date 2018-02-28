@@ -18,6 +18,9 @@ function selectMethod(selector) {
 
 /**
  * Wait for elements to be ready in DOM.
+ * @example
+ * waitForElements('#element-id').then(element => console.log(element))
+ * waitForElements('.element-class').then(elements => console.log(elements))
  * @param  {String}         selector String defining the selector for the HTML Element.
  * @param  {Number}         count    Default 1. How many html elements should method wait for.
  * @param  {Number}         wait     How many secconds should method wait for before throwing error.
@@ -54,6 +57,10 @@ function _testUndefined(val) {
 
 /**
  * Wait for a variable to be 'ready' / filled in. *
+ * @example
+ * let obj = {}
+ * setTimeout(() => obj.value = 10, 500)
+ * waitForVariable(obj, (o) => o.value).then(o => console.log(o.value))
  * @param  {any}          variable   Variable method is waiting for.
  * @param  {Function}     tester     Default 1. How many html elements should method wait for.
  * @param  {Number}       wait       How many secconds should method wait for before throwing error.

@@ -9,6 +9,10 @@
 /**
  * Extend the `target` object with all the objects behind him (in the list of params).
  * As a note, this will not 'extend' arrays. If you need that, please use $.extend from jQuery.
+ * @example
+ * let obj = { a = 1 };
+ * let obj2 = {};
+ * exend(true, obj2, obj);
  * @param  {Boolean} deep   Whether to do a deep extend or not.
  * @param  {Object}  target Object to extend
  * @param  {Object}  args   Object(s) to extend with
@@ -33,7 +37,11 @@ export function extend(deep, target, ...args) {
 }
 
 /**
- * Obtain the name of a class
+ * Obtain the name of a class.
+ * WARNING: This method will not function correclty if code is passed through an uglifier.
+ * @example
+ * class Test {};
+ * const cn = className(new Test());
  * @param  {Object}  obj           Object to obtain the class name
  * @param  {Boolean} isConstructor Default 'false'. Wheter object is the constructor already or not
  * @return {String}  String name of the class
@@ -49,6 +57,11 @@ export function className(obj, isConstructor = false) {
 
 /**
  * Obtain the name of a class's parent (the name of the class which is extended by the current one)
+ * WARNING: This method will not function correclty if code is passed through an uglifier.
+ * @example
+ * class Parent {};
+ * class Test extends Parent {};
+ * const cn = parentClassName(new Parent());
  * @param  {Object} obj Object to obtain the parent class name
  * @return {String} String name of the class
  */

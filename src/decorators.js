@@ -1,3 +1,4 @@
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 /**
  * Amaranth - Aurelia Skeleton (http://github.com/amaranth-framework/aurelia-skeleton/)
  *
@@ -18,4 +19,3 @@ import { className } from './object';
 export function deprecate(target, key, descriptor) {
     console.warn(`Usage of ${className(target)}.${key} is deprecated. Please see documentation.`); // eslint-disable-line no-use-before-define
 }
-

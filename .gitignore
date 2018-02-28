@@ -19,6 +19,7 @@ coverage
 
 # Compiled code
 dist
+docs
 
 # nyc test coverage
 .nyc_output
