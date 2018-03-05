@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  # - "iojs"
+  - "7"
+  - "8"
+  - "lts/*"
+  - "node"
+
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm i
+
+scripts:
+  - npm run test -- --browsers Firefox --single-run
+
+notifications:
+  slack:
+    rooms:
+      # obtained by running
+      # docker run -v $(pwd)/feathers-skeleton:/home/skeleton ruby sh -c 'set -xe; cd /home/skeleton; gem install travis -v 1.8.8 --no-rdoc --no-ri; travis encrypt "<account>:<token>#channel" --add notifications.slack.rooms'
+      # - secure: "sdfusdhfsdofguhdfgubdsifgudfbgs3453durghssecurestringidsuag34522irueg="
+      # or
+      # - <account>:<token>#channel
+      - secure: fskRm8iiMc7g41YJcN+Mp11/4JRbypUsiWup15sVVZN+Y76Nw6Ev1kFSHPZatcNAsbEF0yS4Ezlonc3Irb3rcU+Jz3+lyXwyHTt1vKl9HgJ9tpFffvBa3VzsHhUAbWfEDIPcTxCz/F40DnGa8kpicxmNRi1LkfF6N050TK90gUDQiJqefUnL3RU56asagslG9SL04wHh0NPoQe5nMMROnW70vdNxRWI9nura/Fh/5kwF8ZKaQUW0my8dEAXeF02tsfU5WtwOk5UZlrsMH4B6E6+diQltWO37anATn2W7srbUN7nKwXTmVFuU3qKqDknmadxvvJNq6gHFta67IFFgqOyZstHotvPaK4DJONUS7lVN1HwWx4bnUt8h0OgZbRoOwPxUhq8RCFizvxYZnlqGIHp5Chm+OSouwCg7EhDH45Bv86xM8QHxvTuRimH1NjRLxJ2yVFyhhV4fNyZqFvTLlm7Up3fULZuBB7PqBKhwkn+QaICkZLHhB4x00g9g1rI8z3kP+IfgPLtFuUnTDmw9pd75u3G1N1EJ+76Mcbj9tn8B97pFES1+EaRRlXE1/0ji2eKNsYMNozgHkjDyWNafqQ9Jf/d39XQZFGp/GLbnML/gx7jvOaYCzl+gve5Xdk1+i4CCivk/KlkO9oPB0Xa9qmGKiY/JB4qMTkk2GNZ+XRw=
+    on_success: always
+    on_failure: always
+  # email:
+  #   recipients:
+  #     - amaranth@itmediaconnect.ro
+  #   on_success: never # default: change
+  #   on_failure: always # default: always
