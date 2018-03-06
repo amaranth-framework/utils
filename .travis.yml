@@ -6,7 +6,7 @@ node_js:
   - "node"
 
 addons:
-  chrome: stable
+  # chrome: stable
   firefox: latest
 
 before_script:
