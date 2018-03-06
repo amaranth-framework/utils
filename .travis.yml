@@ -16,7 +16,7 @@ before_script:
 
 scripts:
   - npm run lint
-  - npm run test #-- --single-run
+  - npm run test -- --single-run
 
 notifications:
   slack:
