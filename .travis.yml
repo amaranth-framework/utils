@@ -15,6 +15,7 @@ before_script:
   - npm i
 
 scripts:
+  - sed -e "s|singleRun: false|singleRun: true|g" -i karma.conf.js
   - npm run lint
   - npm run test -- --browsers Firefox --single-run
 
