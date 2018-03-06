@@ -23,11 +23,11 @@ notifications:
   slack:
     rooms:
       # obtained by running
-      # docker run -v $(pwd)/feathers-skeleton:/home/skeleton ruby sh -c 'set -xe; cd /home/skeleton; gem install travis -v 1.8.8 --no-rdoc --no-ri; travis encrypt "<account>:<token>#channel" --add notifications.slack.rooms'
+      # docker run -v $(pwd):/home/travis ruby sh -c 'set -xe; cd /home/travis; gem install travis -v 1.8.8 --no-rdoc --no-ri; travis encrypt "<account>:<token>#channel" --add notifications.slack.rooms'
       # - secure: "sdfusdhfsdofguhdfgubdsifgudfbgs3453durghssecurestringidsuag34522irueg="
       # or
       # - <account>:<token>#channel
-      - secure: fskRm8iiMc7g41YJcN+Mp11/4JRbypUsiWup15sVVZN+Y76Nw6Ev1kFSHPZatcNAsbEF0yS4Ezlonc3Irb3rcU+Jz3+lyXwyHTt1vKl9HgJ9tpFffvBa3VzsHhUAbWfEDIPcTxCz/F40DnGa8kpicxmNRi1LkfF6N050TK90gUDQiJqefUnL3RU56asagslG9SL04wHh0NPoQe5nMMROnW70vdNxRWI9nura/Fh/5kwF8ZKaQUW0my8dEAXeF02tsfU5WtwOk5UZlrsMH4B6E6+diQltWO37anATn2W7srbUN7nKwXTmVFuU3qKqDknmadxvvJNq6gHFta67IFFgqOyZstHotvPaK4DJONUS7lVN1HwWx4bnUt8h0OgZbRoOwPxUhq8RCFizvxYZnlqGIHp5Chm+OSouwCg7EhDH45Bv86xM8QHxvTuRimH1NjRLxJ2yVFyhhV4fNyZqFvTLlm7Up3fULZuBB7PqBKhwkn+QaICkZLHhB4x00g9g1rI8z3kP+IfgPLtFuUnTDmw9pd75u3G1N1EJ+76Mcbj9tn8B97pFES1+EaRRlXE1/0ji2eKNsYMNozgHkjDyWNafqQ9Jf/d39XQZFGp/GLbnML/gx7jvOaYCzl+gve5Xdk1+i4CCivk/KlkO9oPB0Xa9qmGKiY/JB4qMTkk2GNZ+XRw=
+      - secure: oFCH3KX5jOKBGgm6jtDdX0/d0DflzDcdUE5UN/oQvkUzImVDX708BRSWWZ+TfQIuxOhKPjlaAojKHpCJ2uPoISIEMgljIZXNWIgXq0NoShSWiNuudHByCHEdG7mg9iyTZxTTe0I8FLCtx6opbo+9doe/ZWVjpTzRNJSa/tpSjCwk799NesnZhkxF8SwUTAL1fldbRhQnMt2Yiyr5e8TNk7hG/BDcSTpRrauIPRnC7hgKFSL5EV3klqJQgdOt8LuJ+T9eVIBB3OWiI/pD3FNk2JS43qvMvMTiTa09f/Cx5XrEftp5EpvuXB9lqm5F0O54oOYDHLK+em83klE7aAy+jUouaKQu2DjjHhZsdj4uUvX2aHNmLNMVORNVSJ4gZybUcjGP+2wDv0DLyBrH1hECp67qljR+/N/eogWvtXM4MynrjdLvkLRGoFsF9kkWmQyWOFvW3o8lQy8im+aQDNXR91C0VcdshNi9N5bK2W8x9Exd12vTrCOztBYzi/NBDrQoitR9AuIS25YGzuCBp1XaR+eRS2+Qr67oy1MfuJwyGAxd1WLyqXgrxQ6gi6XELnqCqtyKsGib0gDaEmsmV4YHklmah2aX9Z41Du9Bm8BykZgfhmfnT8PxCG5oPAiPMd7uB8HR18x9AoCrLB7XCSoiiAgu31ShRuX5ByKdv3Gj0mk=
     on_success: always
     on_failure: always
   # email:
