@@ -15,9 +15,8 @@ before_script:
   - npm i
 
 scripts:
-  - cat karma.conf.js
   - npm run lint
-  - npm run test -- --single-run
+  - npm run test #-- --single-run
 
 notifications:
   slack:
