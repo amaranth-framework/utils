@@ -23,7 +23,7 @@ export const UUID_V4 = 4;
 
 /**
  * Obtain a UUID format string
- * @param  {Number} [v=4] UUID Version. 
+ * @param  {Number} [v=4] UUID Version.
  * @return {String}
  */
 export function uuid(v = UUID_V4) {
