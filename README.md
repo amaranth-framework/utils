@@ -1,8 +1,12 @@
 # amaranth-utils
 
 [![npm Version](https://img.shields.io/npm/v/amaranth-utils.svg)](https://www.npmjs.com/package/amaranth-utils)
+[![TravisCI](https://travis-ci.org/amaranth-framework/utils.svg?branch=master)](https://travis-ci.org/amaranth-framework/utils)
+[![CircleCI](https://circleci.com/gh/amaranth-framework/utils.svg?style=shield)](https://circleci.com/gh/amaranth-framework/utils)
 
-This library is part of the [Amaranth](~) Framework) projects (was originaly developed for an extension of [Aurelia](https://aurelia.io) and contains amaranth functionality util among all projects Amaranth is set to develop.
+> NOTE: We have some issues on TravisCI, with Karma not stoping after test is done. Bare with us.
+
+This library is part of the [Amaranth](~) Framework) projects (was originaly developed for an extension of [amaranth-framework](https://amaranth-framework.io) and contains amaranth functionality util among all projects Amaranth is set to develop.
 
 ## Documention
 
