@@ -76,11 +76,12 @@
     "directories": {
       "dist": "dist/amd"
     },
-    "dependencies": {},
-    "devDependencies": {
-      "aurelia-polyfills": "^1.0.0",
+    "dependencies": {
       "js-cookie": "^2.2.0",
       "uuid-js": "^0.7.5"
+    },
+    "devDependencies": {
+      "aurelia-polyfills": "^1.0.0"
     }
   }
 }
